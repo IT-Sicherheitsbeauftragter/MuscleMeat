@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MuscleMeat</title>
+<link rel="stylesheet" href="MuscleMeat.css">
+</head>
+<body>
+<header>
+<h1>MuscleMeat</h1>
+</header>
+<main>
+
+<section id="nährstoffplanung">
+<h2>Nährstoffplanung</h2>
+<p id="gewichteingabewrapper">Gib dein Gewicht ein (in kg):</p>
+<input type="number" id="gewichteingabe" placeholder="z. B. 65">
+<button id="zielberechnen" onclick="proteinzielberechnen()">Proteinziel berechnen</button>
+<p>Tägliches Proteinziel: <span id="zielanzeige">Nicht festgelegt</span></p>
+<p id="proteinhinweis" style="display: none; color: green;">Dies ist die optimale Proteinmenge für deine Muskeln!</p>
+</section>
+
+<section id="protein-tracking">
+<h2>Protein-Tracking</h2>
+<p>Gib die Menge an Protein ein,<br>die du konsumiert hast (in Gramm):</p>
+<input type="number" id="proteineingabe" placeholder="z.B. 40">
+<button onclick="proteinhinzufügen()">Protein hinzufügen</button>
+<p>Gesamtes Protein: <span id="proteingesamt">0</span> Gramm</p>
+<p id="zielerreichthinweis" style="display: none; color: green;">Glückwunsch! Du hast dein heutiges Proteinziel erreicht!</p>
+</section>
+
+<section id="fleischempfehlungen">
+<h2>Fleischempfehlungen</h2>
+<button onclick="fleischempfehlen()">Ich will Fleisch!</button>
+<p>Empfohlenes Fleisch: <span id="fleischanzeige">Noch keine Empfehlung</span></p>
+</section>
+</main>
+<script src="MuscleMeat.js"></script>
+</body>
+</html>
